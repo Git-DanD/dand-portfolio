@@ -1,12 +1,11 @@
 // src/components/MyComponent.jsx
 import React from 'react';
-import MyComponent from './MyComponent';
+import Footer from './Components/Footer';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello, World!</h1>
-      <MyComponent />
+      <Footer />
     </div>
   );
 };
