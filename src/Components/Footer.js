@@ -2,10 +2,10 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white">
+    <footer className="#1e1e1e">
       <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-8 sm:px-6 lg:px-8">
-        <div className="border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between">
-          <p className="flex flex-wrap justify-center gap-4 text-xs text-gray-500 lg:justify-end">
+        <div className="border-t border-gray-400 pt-8 sm:flex sm:items-center sm:justify-between">
+          <p className="flex flex-wrap justify-center gap-4 text-xs text-gray-400 lg:justify-end">
             &copy; 2022. DatDotDev. All rights reserved.
           </p>
 
@@ -15,7 +15,7 @@ const Footer = () => {
                 href="https://github.com/Git-DanD"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:opacity-75"
+                className="text-gray-400 transition hover:opacity-75"
               >
                 <span className="sr-only">GitHub</span>
 
@@ -39,7 +39,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/dat-tan-duong/"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:opacity-75"
+                className="text-gray-400 transition hover:opacity-75"
               >
                 <span className="sr-only">LinkedIn</span>
 
