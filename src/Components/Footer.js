@@ -12,7 +12,7 @@ const Footer = () => {
           <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
             <li>
               <a
-                href="#"
+                href="https://github.com/Git-DanD"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75"
@@ -36,7 +36,7 @@ const Footer = () => {
 
             <li>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/dat-tan-duong/"
                 rel="noreferrer"
                 target="_blank"
                 className="text-gray-700 transition hover:opacity-75"
