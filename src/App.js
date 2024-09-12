@@ -1,10 +1,18 @@
-// src/components/MyComponent.jsx
-import React from 'react';
-import Footer from './Components/Footer';
+import React from "react";
+import Footer from "./Components/Footer";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
+      }}
+    >
+      <main style={{ flex: "1" }}>
+        <p>Your main content will appear here...</p>
+      </main>
       <Footer />
     </div>
   );
