@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
         minHeight: "100vh",
       }}
     >
+      <Header />
       <main style={{ flex: "1" }}>
         <p>Your main content will appear here...</p>
       </main>
