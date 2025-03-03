@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="mx-auto max-w-screen-xl px-4 pb-8 pt-8 sm:px-6 lg:px-8">
         <div className="border-t border-slate-300 pt-8 sm:flex sm:items-center sm:justify-between">
           <p className="flex flex-wrap justify-center gap-4 text-xs text-slate-300 lg:justify-end">
-            &copy; 2024. DatDotDev. All rights reserved.
+            &copy; 2024. DatDuong. All rights reserved.
           </p>
 
           <ul className="mt-8 flex justify-center gap-6 sm:mt-0 lg:justify-end">
