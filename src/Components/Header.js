@@ -27,7 +27,7 @@ const Header = () => {
               href="#"
               className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
             >
-              Link
+              Home
             </a>
           </li>
           <li className="flex">
@@ -36,7 +36,7 @@ const Header = () => {
               href="#"
               className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
             >
-              Link
+              My Skills
             </a>
           </li>
           <li className="flex">
@@ -45,7 +45,7 @@ const Header = () => {
               href="#"
               className="flex items-center px-4 -mb-1 border-b-2 dark:border- dark:text-violet-600 dark:border-violet-600"
             >
-              Link
+              Experience / Education
             </a>
           </li>
           <li className="flex">
@@ -54,7 +54,16 @@ const Header = () => {
               href="#"
               className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
             >
-              Link
+              Portfolio
+            </a>
+          </li>
+          <li className="flex">
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
+            >
+              Contact
             </a>
           </li>
         </ul>
