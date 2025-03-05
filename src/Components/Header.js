@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Header = () => {
+  const [activeLink, setActiveLink] = useState("Home");
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
   return (
     <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
       <div className="container flex justify-between h-16 mx-auto">
@@ -21,51 +27,28 @@ const Header = () => {
           </svg>
         </a>
         <ul className="items-stretch hidden space-x-3 md:flex">
-          <li className="flex">
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
-            >
-              Home
-            </a>
-          </li>
-          <li className="flex">
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
-            >
-              My Skills
-            </a>
-          </li>
-          <li className="flex">
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 dark:border- dark:text-violet-600 dark:border-violet-600"
-            >
-              Experience / Education
-            </a>
-          </li>
-          <li className="flex">
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
-            >
-              Portfolio
-            </a>
-          </li>
-          <li className="flex">
-            <a
-              rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 border-b-2 dark:border-"
-            >
-              Contact
-            </a>
-          </li>
+          {[
+            "Home",
+            "My Skills",
+            "Experience / Education",
+            "Portfolio",
+            "Contact",
+          ].map((link) => (
+            <li className="flex" key={link}>
+              <a
+                rel="noopener noreferrer"
+                href="#"
+                onClick={() => handleLinkClick(link)}
+                className={`flex items-center px-4 -mb-1 border-b-2 transition-all ${
+                  activeLink === link
+                    ? "dark:border-violet-600 dark:text-violet-600"
+                    : "border-transparent dark:border-transparent"
+                }`}
+              >
+                {link}
+              </a>
+            </li>
+          ))}
         </ul>
         <button className="flex justify-end p-4 md:hidden">
           <svg
