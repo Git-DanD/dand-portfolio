@@ -82,7 +82,7 @@ const Contact = () => {
         </div>
 
         {/* Right Side - Contact Icons arranged horizontally */}
-        <div className="w-full flex justify-center space-x-8 mt-8">
+        <div className="w-full flex items-center justify-center space-x-8 mt-8">
           {[
             {
               icon: FaLinkedin,
@@ -106,7 +106,7 @@ const Contact = () => {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-4 bg-white shadow-lg p-4 rounded-2xl w-64 dark:bg-gray-200 hover:bg-gray-300 transition-all"
+              className="flex flex-col items-center space-y-2 bg-white shadow-lg p-4 rounded-2xl w-64 dark:bg-gray-200 hover:bg-gray-300 transition-all"
             >
               <Icon className="text-violet-600 text-3xl" />
               <span className="text-lg font-medium">{text}</span>
