@@ -22,8 +22,13 @@ const ExperienceEducation = () => {
   const education = [
     {
       degree: "Bachelor's in IT (with distinction)",
-      institution: "Your University",
-      year: "Graduated",
+      institution: "Queensland University of Technology",
+      year: "Graduated 2024",
+    },
+    {
+      degree: "Queensland Certificate of Education",
+      institution: "Grace Lutheran College",
+      year: "Graduated 2020",
     },
   ];
 
