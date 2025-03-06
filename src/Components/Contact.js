@@ -20,7 +20,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="p-8 dark:bg-gray-100 dark:text-gray-800">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-12">
+      <div className="container mx-auto flex flex-col items-center justify-center gap-12">
         {/* Left Side - Contact Form */}
         <div className="w-full md:w-1/2 bg-white shadow-lg p-6 rounded-xl dark:bg-gray-200">
           <h2 className="text-3xl font-semibold dark:text-violet-600 mb-6 text-center">
@@ -81,8 +81,8 @@ const Contact = () => {
           </form>
         </div>
 
-        {/* Right Side - Contact Icons */}
-        <div className="w-full md:w-1/2 flex flex-col items-center space-y-4">
+        {/* Right Side - Contact Icons arranged horizontally */}
+        <div className="w-full flex justify-center space-x-8 mt-8">
           {[
             {
               icon: FaLinkedin,
