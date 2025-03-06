@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import Skills from "./Components/Skills";
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
     >
       <Header />
       <main style={{ flex: "1" }}>
-        <p>Your main content will appear here...</p>
+        <Skills />
       </main>
       <Footer />
     </div>
