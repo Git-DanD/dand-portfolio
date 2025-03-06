@@ -19,8 +19,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="p-8 dark:bg-gray-100 dark:text-gray-800">
-      <div className="container mx-auto flex flex-col items-center justify-center gap-12">
+    <section
+      id="contact"
+      className="p-8 dark:bg-gray-100 dark:text-gray-800 h-screen w-screen"
+    >
+      <div className="container mx-auto flex flex-col items-center justify-center gap-12 h-full">
         {/* Left Side - Contact Form */}
         <div className="w-full md:w-1/2 bg-white shadow-lg p-6 rounded-xl dark:bg-gray-200">
           <h2 className="text-3xl font-semibold dark:text-violet-600 mb-6 text-center">

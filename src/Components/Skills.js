@@ -13,8 +13,11 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="p-8 dark:bg-gray-100 dark:text-gray-800">
-      <div className="container mx-auto text-center">
+    <section
+      id="skills"
+      className="p-8 dark:bg-gray-100 dark:text-gray-800 h-screen w-screen"
+    >
+      <div className="container mx-auto text-center h-full flex flex-col justify-center">
         <h2 className="text-3xl font-semibold dark:text-violet-600 mb-6">
           My Skills
         </h2>

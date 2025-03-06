@@ -4,11 +4,19 @@ const ExperienceEducation = () => {
   const experience = [
     {
       role: "Fulfillment Worker",
-      company: "Current Employer",
+      company: "IKEA",
       year: "Present",
     },
-    { role: "Baker’s Assistant", company: "Bakery", year: "Previous" },
-    { role: "Surf Club Waiter", company: "Surf Club", year: "Previous" },
+    {
+      role: "Baker’s Assistant",
+      company: "The Family Bakery",
+      year: "Previous",
+    },
+    {
+      role: "Surf Club Waiter",
+      company: "Bribie Island Surf Club",
+      year: "Previous",
+    },
   ];
 
   const education = [
@@ -22,9 +30,9 @@ const ExperienceEducation = () => {
   return (
     <section
       id="experience-education"
-      className="p-8 dark:bg-gray-100 dark:text-gray-800"
+      className="p-8 dark:bg-gray-100 dark:text-gray-800 h-screen w-screen"
     >
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center h-full flex flex-col justify-center">
         <h2 className="text-3xl font-semibold dark:text-violet-600 mb-6">
           Experience & Education
         </h2>

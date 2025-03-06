@@ -8,11 +8,11 @@ const Header = () => {
   };
 
   return (
-    <header className="p-4 dark:bg-gray-100 dark:text-gray-800">
+    <header className="sticky top-0 z-50 p-4 dark:bg-gray-100 dark:text-gray-800 shadow-md">
       <div className="container flex justify-between h-16 mx-auto">
         <a
           rel="noopener noreferrer"
-          href="#"
+          href="#home"
           aria-label="Back to homepage"
           className="flex items-center p-2"
         >
@@ -28,24 +28,24 @@ const Header = () => {
         </a>
         <ul className="items-stretch hidden space-x-3 md:flex">
           {[
-            "Home",
-            "My Skills",
-            "Experience / Education",
-            "Portfolio",
-            "Contact",
-          ].map((link) => (
-            <li className="flex" key={link}>
+            { name: "Home", id: "home" },
+            { name: "My Skills", id: "skills" },
+            { name: "Experience / Education", id: "experience-education" },
+            { name: "Portfolio", id: "portfolio" },
+            { name: "Contact", id: "contact" },
+          ].map(({ name, id }) => (
+            <li className="flex" key={name}>
               <a
                 rel="noopener noreferrer"
-                href="#"
-                onClick={() => handleLinkClick(link)}
+                href={`#${id}`}
+                onClick={() => handleLinkClick(name)}
                 className={`flex items-center px-4 -mb-1 border-b-2 transition-all ${
-                  activeLink === link
+                  activeLink === name
                     ? "dark:border-violet-600 dark:text-violet-600"
                     : "border-transparent dark:border-transparent"
                 }`}
               >
-                {link}
+                {name}
               </a>
             </li>
           ))}
