@@ -1,37 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const projects = [
   {
     id: 1,
     title: "E-Commerce Website",
     category: "Web Development",
-    description: "A fully responsive e-commerce platform with Stripe integration.",
+    description: "A fully responsive e-commerce platform.",
     image: "https://source.unsplash.com/400x300/?technology",
-    link: "https://yourwebsite.com",
+    link: "#",
   },
   {
     id: 2,
     title: "Portfolio Website",
     category: "Web Development",
-    description: "A sleek personal portfolio showcasing my skills and projects.",
+    description: "A sleek personal portfolio.",
     image: "https://source.unsplash.com/400x300/?design",
-    link: "https://yourportfolio.com",
+    link: "#",
   },
   {
     id: 3,
     title: "3D Game in Unreal Engine",
     category: "Game Development",
-    description: "An immersive 3D adventure game developed in Unreal Engine.",
+    description: "An immersive 3D game.",
     image: "https://source.unsplash.com/400x300/?gaming",
-    link: "https://yourgame.com",
+    link: "#",
   },
   {
     id: 4,
     title: "Logo Design",
     category: "Design",
-    description: "A minimal and modern logo designed for a startup.",
+    description: "A modern logo for a startup.",
     image: "https://source.unsplash.com/400x300/?art",
-    link: "https://yourdesign.com",
+    link: "#",
+  },
+  {
+    id: 5,
+    title: "Weather App",
+    category: "Web Development",
+    description: "A real-time weather app.",
+    image: "https://source.unsplash.com/400x300/?weather",
+    link: "#",
   },
 ];
 
@@ -40,17 +48,29 @@ const categories = ["All", "Web Development", "Game Development", "Design"];
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [selectedProject, setSelectedProject] = useState(null);
+  const [containerHeight, setContainerHeight] = useState("auto");
+  const gridRef = useRef(null);
 
   const filteredProjects =
     activeCategory === "All"
       ? projects
       : projects.filter((project) => project.category === activeCategory);
 
+  useEffect(() => {
+    if (gridRef.current) {
+      const newHeight = gridRef.current.scrollHeight;
+      setContainerHeight(`${newHeight}px`);
+    }
+  }, [filteredProjects]);
+
   return (
-    <section id="portfolio" className="p-8 bg-gray-100 dark:bg-gray-900">
+    <section
+      id="portfolio"
+      className="min-h-screen flex flex-col justify-center p-8 dark:bg-gray-900 dark:text-gray-800"
+    >
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-semibold dark:text-violet-600 mb-6">
-          My Portfolio
+          Portfolio
         </h2>
 
         {/* Tabs */}
@@ -70,32 +90,44 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {/* Project Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="relative group bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform transform hover:scale-105"
-              onClick={() => setSelectedProject(project)}
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="text-xl font-semibold dark:text-white">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">{project.category}</p>
-              </div>
+        {/* Project Cards with Smooth Expand */}
+        <div
+          className="transition-all duration-500 ease-in-out overflow-hidden"
+          style={{ height: containerHeight }}
+        >
+          <div
+            ref={gridRef}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {filteredProjects.map((project) => (
+              <div
+                key={project.id}
+                className="relative group bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden cursor-pointer transition-transform transform hover:scale-105"
+                onClick={() => setSelectedProject(project)}
+              >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold dark:text-white">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {project.category}
+                  </p>
+                </div>
 
-              {/* Hover Effect */}
-              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all">
-                <span className="text-white text-lg font-medium">View Details</span>
+                {/* Hover Effect */}
+                <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-all">
+                  <span className="text-white text-lg font-medium">
+                    View Details
+                  </span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
