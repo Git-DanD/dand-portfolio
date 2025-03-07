@@ -4,6 +4,7 @@ import Header from "./Components/Header";
 import Skills from "./Components/Skills";
 import ExperienceEducation from "./Components/ExperienceEducation";
 import Contact from "./Components/Contact";
+import Home from "./Components/Home";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
     >
       <Header />
       <main style={{ flex: "1" }}>
+        <Home />
         <Skills />
         <ExperienceEducation />
         <Contact />
