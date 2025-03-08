@@ -82,9 +82,9 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="min-h-screen flex flex-col justify-center p-8 dark:bg-gray-900 dark:text-gray-800"
+      className="min-h-screen flex flex-col justify-center p-8 dark:bg-gray-900 dark:text-gray-800 scroll-mt-16"
     >
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto m-16 text-center h-full flex flex-col justify-center">
         <h2 className="text-3xl font-semibold dark:text-violet-600 mb-6">
           Portfolio
         </h2>
