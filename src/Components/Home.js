@@ -10,8 +10,7 @@ const Home = () => {
         Hi, I'm <span className="text-violet-600">Dat (Brendan) Duong</span>
       </h1>
       <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mt-4 max-w-2xl">
-        I'm a passionate Web Designer who loves building amazing web
-        experiences.
+        I'm an IT Graduate, focused on Web Design.
       </p>
       <div className="mt-6">
         <a
